@@ -1,13 +1,7 @@
 /* eslint-disable prettier/prettier */
-import Movies from './components/Movie';
+import Movies from './components/Movies';
 
-const App = () => { <h1>Her kan du lage magi</h1>
 
-return (
-    <>
-        <Movies />
-    </>
-)    
-};
+const App = () => <Movies />
 
 export default App;
