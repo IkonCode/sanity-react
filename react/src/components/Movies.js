@@ -1,6 +1,8 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import { getMovies} from '../utils/movieService';
+import Movie from './Movie';
+
 
 
 const Movies = () => {
@@ -12,10 +14,13 @@ const Movies = () => {
     }
 
     return(
-        <>
-        {movies ?.length > 0 ? <p>{JSON.stringify(movies)}</p> : null}
-        <button type="button" onClick={handleClick}>Test</button>
-        </>
+        <div>
+            <h2>Movies</h2>
+            <ul>
+                {movies ?.length > 0 && movies.map((movie) => (<Movie key={movie._id} title ={movie.title} actor ={movie.actor}/>))};
+            </ul>
+            <button type="button" onClick={handleClick}>Test</button>
+        </div>
     );
 };
 
